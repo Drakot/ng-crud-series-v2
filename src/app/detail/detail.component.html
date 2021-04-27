@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+  <input formControlName = "name"  placeholder="Nombre">
+  <input formControlName = "type" placeholder="tipo">
+
+  <button (click) ="save()" >Guardar</button>
+  <button (click) ="deleteSerie()">Borrar</button>
+</form>

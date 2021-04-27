@@ -1,0 +1,18 @@
+<div class="col-4">
+
+  <label>Buscar por nombre o género</label>
+  <input [value]="searchName" (keyup)="updateSearch($event)" placeholder="Busca por nombre o género">
+
+</div>
+<button [routerLink]="['/detail/new']">Nuevo</button>
+
+<div class="row">
+  <div *ngFor="let serie of series" class="col-4 mt-4 card-box">
+    <a class="selection-card" routerLink="/detail/{{serie._id}}">
+      <div class="white-card">
+        <h2>{{ serie.name }}</h2>
+      </div>
+    </a>
+    <p> {{ serie.type }}</p>
+  </div>
+</div>
